@@ -8,7 +8,7 @@
 
 1. **CUSTOM_PROVIDER_GUIDE.md** - 完整的自定义模型配置教程
 2. **add_custom_provider.sh** - 通用的自定义提供商配置脚本模板
-3. **setup_taou_claude.sh** - TAOU Claude 的快速配置脚本（预配置好的示例）
+3. **setup_xxx_claude.sh** - xxx Claude 的快速配置脚本（预配置好的示例）
 
 ## 🚀 三种配置方式
 
@@ -19,8 +19,8 @@
 ```
 
 按提示输入：
-- 提供商标识（如：taou-claude）
-- 显示名称（如：TAOU Claude）
+- 提供商标识（如：xxx-claude）
+- 显示名称（如：xxx Claude）
 - Base URL
 - API Key
 - 超时时间（可选）
@@ -29,19 +29,19 @@
 ### 方式 2: 环境变量配置（适合自动化）
 
 ```bash
-export PROVIDER_ID="taou-claude"
-export PROVIDER_NAME="TAOU Claude"
-export BASE_URL="https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic"
+export PROVIDER_ID="xxx-claude"
+export PROVIDER_NAME="xxx Claude"
+export BASE_URL="https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic"
 export API_KEY="claude_code"
 ./m2cc.sh --add-custom-env
 ```
 
 ### 方式 3: 使用预配置脚本（最快）
 
-针对你提到的 TAOU Claude 配置，我们创建了一个一键配置脚本：
+针对你提到的 xxx Claude 配置，我们创建了一个一键配置脚本：
 
 ```bash
-./setup_taou_claude.sh
+./setup_xxx_claude.sh
 ```
 
 这个脚本已经预配置好了所有参数，只需要运行即可！
@@ -72,16 +72,16 @@ export API_KEY="claude_code"
 
 ## 💡 使用示例
 
-### 快速配置 TAOU Claude：
+### 快速配置 xxx Claude：
 
 ```bash
 # 方法 1: 使用一键脚本（推荐）
-./setup_taou_claude.sh
+./setup_xxx_claude.sh
 
 # 方法 2: 使用环境变量
-PROVIDER_ID="taou-claude" \
-PROVIDER_NAME="TAOU Claude" \
-BASE_URL="https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic" \
+PROVIDER_ID="xxx-claude" \
+PROVIDER_NAME="xxx Claude" \
+BASE_URL="https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic" \
 API_KEY="claude_code" \
 ./m2cc.sh --add-custom-env
 
@@ -96,8 +96,8 @@ API_KEY="claude_code" \
 # 查看所有配置的提供商
 ./m2cc.sh --list
 
-# 切换到 TAOU Claude
-./m2cc.sh --switch custom-taou-claude
+# 切换到 xxx Claude
+./m2cc.sh --switch custom-xxx-claude
 
 # 查看当前状态
 ./m2cc.sh --status
@@ -114,12 +114,12 @@ claude
 
 ```bash
 # Bash 用户
-echo 'export ANTHROPIC_BASE_URL=https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic' >> ~/.bashrc
+echo 'export ANTHROPIC_BASE_URL=https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic' >> ~/.bashrc
 echo 'export ANTHROPIC_AUTH_TOKEN=claude_code' >> ~/.bashrc
 source ~/.bashrc
 
 # Zsh 用户
-echo 'export ANTHROPIC_BASE_URL=https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic' >> ~/.zshrc
+echo 'export ANTHROPIC_BASE_URL=https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic' >> ~/.zshrc
 echo 'export ANTHROPIC_AUTH_TOKEN=claude_code' >> ~/.zshrc
 source ~/.zshrc
 ```
@@ -135,12 +135,12 @@ source ~/.zshrc
   "providers": {
     "minimax": { ... },
     "deepseek": { ... },
-    "custom-taou-claude": {
-      "name": "custom-taou-claude",
-      "displayName": "TAOU Claude",
+    "custom-xxx-claude": {
+      "name": "custom-xxx-claude",
+      "displayName": "xxx Claude",
       "apiKeyName": "",
       "apiKeyUrl": "",
-      "baseUrl": "https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic",
+      "baseUrl": "https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic",
       "apiKey": "claude_code",
       "timeout": "600000",
       "models": {
@@ -152,7 +152,7 @@ source ~/.zshrc
       }
     }
   },
-  "activeProvider": "custom-taou-claude"
+  "activeProvider": "custom-xxx-claude"
 }
 ```
 
@@ -161,7 +161,7 @@ source ~/.zshrc
 ```json
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic",
+    "ANTHROPIC_BASE_URL": "https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic",
     "ANTHROPIC_AUTH_TOKEN": "claude_code",
     "API_TIMEOUT_MS": "600000",
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": 1,
@@ -183,7 +183,7 @@ source ~/.zshrc
 
 ### 切换提供商
 ```bash
-./m2cc.sh --switch custom-taou-claude
+./m2cc.sh --switch custom-xxx-claude
 ```
 
 ### 删除自定义提供商
@@ -198,7 +198,7 @@ nano ~/.claude/providers.json
 ```bash
 ./m2cc.sh --add-custom
 # 或
-./setup_taou_claude.sh
+./setup_xxx_claude.sh
 ```
 
 ## 📚 详细文档
@@ -215,11 +215,11 @@ nano ~/.claude/providers.json
 
 ## 🚀 快速开始
 
-对于你的 TAOU Claude 配置，最简单的方式：
+对于你的 xxx Claude 配置，最简单的方式：
 
 ```bash
 # 1. 运行配置脚本
-./setup_taou_claude.sh
+./setup_xxx_claude.sh
 
 # 2. 确认配置
 ./m2cc.sh --list

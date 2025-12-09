@@ -2,7 +2,7 @@
 
 ## ✅ 完成的工作
 
-已成功将自定义模型配置功能集成到 M2CC 项目中！现在你可以轻松配置和使用 TAOU Claude 或任何兼容 Anthropic API 的服务。
+已成功将自定义模型配置功能集成到 M2CC 项目中！现在你可以轻松配置和使用 xxx Claude 或任何兼容 Anthropic API 的服务。
 
 ## 📝 新增/修改的文件
 
@@ -15,26 +15,26 @@
 ### 新增文件
 2. **CUSTOM_PROVIDER_GUIDE.md** - 完整的自定义模型配置教程
 3. **add_custom_provider.sh** - 通用配置脚本模板
-4. **setup_taou_claude.sh** - TAOU Claude 一键配置脚本
+4. **setup_xxx_claude.sh** - xxx Claude 一键配置脚本
 5. **CUSTOM_PROVIDER_UPDATE.md** - 更新说明文档
 6. **README.md** - 已更新，包含自定义模型说明
 
 ## 🚀 快速使用指南
 
-### 方式一：一键配置 TAOU Claude（最简单）
+### 方式一：一键配置 xxx Claude（最简单）
 
 ```bash
 # 直接运行预配置脚本
-./setup_taou_claude.sh
+./setup_xxx_claude.sh
 ```
 
 ### 方式二：使用环境变量配置
 
 ```bash
 # 设置环境变量
-export PROVIDER_ID="taou-claude"
-export PROVIDER_NAME="TAOU Claude"
-export BASE_URL="https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic"
+export PROVIDER_ID="xxx-claude"
+export PROVIDER_NAME="xxx Claude"
+export BASE_URL="https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic"
 export API_KEY="claude_code"
 
 # 执行配置
@@ -48,9 +48,9 @@ export API_KEY="claude_code"
 ./m2cc.sh --add-custom
 
 # 按提示输入：
-# - 提供商标识: taou-claude
-# - 显示名称: TAOU Claude
-# - Base URL: https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic
+# - 提供商标识: xxx-claude
+# - 显示名称: xxx Claude
+# - Base URL: https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic
 # - API Key: claude_code
 ```
 
@@ -69,8 +69,8 @@ export API_KEY="claude_code"
 # 列出所有配置的提供商
 ./m2cc.sh --list
 
-# 切换到 TAOU Claude
-./m2cc.sh --switch custom-taou-claude
+# 切换到 xxx Claude
+./m2cc.sh --switch custom-xxx-claude
 
 # 查看当前状态
 ./m2cc.sh --status
@@ -82,14 +82,14 @@ export API_KEY="claude_code"
 ## 🎯 完整使用流程示例
 
 ```bash
-# 1. 配置 TAOU Claude
-./setup_taou_claude.sh
+# 1. 配置 xxx Claude
+./setup_xxx_claude.sh
 
 # 2. 验证配置（会显示所有已配置的提供商）
 ./m2cc.sh --list
 
-# 3. 如果需要切换到 TAOU Claude（配置后会自动询问是否切换）
-./m2cc.sh --switch custom-taou-claude
+# 3. 如果需要切换到 xxx Claude（配置后会自动询问是否切换）
+./m2cc.sh --switch custom-xxx-claude
 
 # 4. 开始使用
 claude
@@ -108,14 +108,14 @@ claude
 
 **Bash 用户：**
 ```bash
-echo 'export ANTHROPIC_BASE_URL=https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic' >> ~/.bashrc
+echo 'export ANTHROPIC_BASE_URL=https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic' >> ~/.bashrc
 echo 'export ANTHROPIC_AUTH_TOKEN=claude_code' >> ~/.bashrc
 source ~/.bashrc
 ```
 
 **Zsh 用户：**
 ```bash
-echo 'export ANTHROPIC_BASE_URL=https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic' >> ~/.zshrc
+echo 'export ANTHROPIC_BASE_URL=https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic' >> ~/.zshrc
 echo 'export ANTHROPIC_AUTH_TOKEN=claude_code' >> ~/.zshrc
 source ~/.zshrc
 ```
@@ -163,10 +163,10 @@ PROVIDER_ID="provider2" BASE_URL="..." API_KEY="..." ./m2cc.sh --add-custom-env
 
 ## 🎊 开始使用
 
-现在就试试吧！运行以下命令开始配置你的 TAOU Claude：
+现在就试试吧！运行以下命令开始配置你的 xxx Claude：
 
 ```bash
-./setup_taou_claude.sh
+./setup_xxx_claude.sh
 ```
 
 祝使用愉快！🚀

@@ -30,8 +30,8 @@ M2CC 支持三种方式添加自定义模型提供商：
 或在主菜单中选择"重新配置模型"选项，然后选择配置自定义模型。
 
 按照提示输入：
-1. **提供商标识**：英文、数字、横杠组合，如 `taou-claude`
-2. **显示名称**：任意名称，如 `TAOU Claude`
+1. **提供商标识**：英文、数字、横杠组合，如 `xxx-claude`
+2. **显示名称**：任意名称，如 `xxx Claude`
 3. **API Base URL**：完整的 API 地址
 4. **API Key/Token**：你的认证密钥
 5. **超时时间**（可选）：默认 600000 毫秒
@@ -40,9 +40,9 @@ M2CC 支持三种方式添加自定义模型提供商：
 ### 示例
 
 ```
-请输入提供商标识（仅英文、数字、横杠，如 custom-claude）： taou-claude
-请输入显示名称（如 自定义 Claude）： TAOU Claude
-请输入 API Base URL： https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic
+请输入提供商标识（仅英文、数字、横杠，如 custom-claude）： xxx-claude
+请输入显示名称（如 自定义 Claude）： xxx Claude
+请输入 API Base URL： https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic
 请输入 API Key/Token： claude_code
 请输入超时时间（毫秒，默认 600000）： 600000
 请输入默认模型名称（默认 claude-3-5-sonnet-20241022）： claude-3-5-sonnet-20241022
@@ -54,9 +54,9 @@ M2CC 支持三种方式添加自定义模型提供商：
 
 ```bash
 # 设置环境变量
-export PROVIDER_ID="taou-claude"
-export PROVIDER_NAME="TAOU Claude"
-export BASE_URL="https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic"
+export PROVIDER_ID="xxx-claude"
+export PROVIDER_NAME="xxx Claude"
+export BASE_URL="https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic"
 export API_KEY="claude_code"
 export TIMEOUT="600000"  # 可选
 export MODEL="claude-3-5-sonnet-20241022"  # 可选
@@ -68,9 +68,9 @@ export MODEL="claude-3-5-sonnet-20241022"  # 可选
 ### 一行命令配置
 
 ```bash
-PROVIDER_ID="taou-claude" \
-PROVIDER_NAME="TAOU Claude" \
-BASE_URL="https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic" \
+PROVIDER_ID="xxx-claude" \
+PROVIDER_NAME="xxx Claude" \
+BASE_URL="https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic" \
 API_KEY="claude_code" \
 ./m2cc.sh --add-custom-env
 ```
@@ -88,9 +88,9 @@ nano add_custom_provider.sh
 
 2. 找到配置示例部分，取消注释并修改为你的实际配置：
 ```bash
-export PROVIDER_ID="taou-claude"
-export PROVIDER_NAME="TAOU Claude"
-export BASE_URL="https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic"
+export PROVIDER_ID="xxx-claude"
+export PROVIDER_NAME="xxx Claude"
+export BASE_URL="https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic"
 export API_KEY="claude_code"
 ```
 
@@ -106,7 +106,7 @@ chmod +x add_custom_provider.sh
 
 ### 命令行切换
 ```bash
-./m2cc.sh --switch custom-taou-claude
+./m2cc.sh --switch custom-xxx-claude
 ```
 
 ### 交互式切换
@@ -145,7 +145,7 @@ nano ~/.claude/providers.json
 
 | 参数 | 环境变量 | 说明 | 示例 |
 |------|----------|------|------|
-| 提供商标识 | `PROVIDER_ID` | 唯一标识符（小写字母、数字、横杠） | `taou-claude` |
+| 提供商标识 | `PROVIDER_ID` | 唯一标识符（小写字母、数字、横杠） | `xxx-claude` |
 | Base URL | `BASE_URL` | API 端点地址 | `https://api.example.com/v1` |
 | API Key | `API_KEY` | 认证密钥 | `your-api-key` |
 
@@ -159,12 +159,12 @@ nano ~/.claude/providers.json
 
 ## 使用示例
 
-### 示例 1: 配置 TAOU Claude
+### 示例 1: 配置 xxx Claude
 
 ```bash
-export PROVIDER_ID="taou-claude"
-export PROVIDER_NAME="TAOU Claude"
-export BASE_URL="https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic"
+export PROVIDER_ID="xxx-claude"
+export PROVIDER_NAME="xxx Claude"
+export BASE_URL="https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic"
 export API_KEY="claude_code"
 ./m2cc.sh --add-custom-env
 ```
@@ -188,7 +188,7 @@ export TIMEOUT="900000"
 
 # 切换（自动提示是否切换）
 # 或手动切换：
-./m2cc.sh --switch custom-taou-claude
+./m2cc.sh --switch custom-xxx-claude
 ```
 
 ## 环境变量持久化（可选）
@@ -197,14 +197,14 @@ export TIMEOUT="900000"
 
 ### Bash 用户
 ```bash
-echo 'export ANTHROPIC_BASE_URL=https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic' >> ~/.bashrc
+echo 'export ANTHROPIC_BASE_URL=https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic' >> ~/.bashrc
 echo 'export ANTHROPIC_AUTH_TOKEN=claude_code' >> ~/.bashrc
 source ~/.bashrc
 ```
 
 ### Zsh 用户
 ```bash
-echo 'export ANTHROPIC_BASE_URL=https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic' >> ~/.zshrc
+echo 'export ANTHROPIC_BASE_URL=https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic' >> ~/.zshrc
 echo 'export ANTHROPIC_AUTH_TOKEN=claude_code' >> ~/.zshrc
 source ~/.zshrc
 ```

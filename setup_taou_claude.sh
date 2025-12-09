@@ -1,23 +1,23 @@
 #!/bin/bash
 
-# TAOU Claude 快速配置脚本
+# xxx Claude 快速配置脚本
 # 这是一个预配置好的示例，可以直接运行
 
 echo "======================================"
-echo "  TAOU Claude 快速配置工具"
+echo "  xxx Claude 快速配置工具"
 echo "======================================"
 echo
 
-# TAOU Claude 配置
-export PROVIDER_ID="taou-claude"
-export PROVIDER_NAME="TAOU Claude"
-export BASE_URL="https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic"
+# xxx Claude 配置
+export PROVIDER_ID="xxx-claude"
+export PROVIDER_NAME="xxx Claude"
+export BASE_URL="https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic"
 export API_KEY="claude_code"
 export TIMEOUT="600000"
 export MODEL="claude-3-5-sonnet-20241022"
 
 echo "即将添加以下配置："
-echo "  提供商: TAOU Claude"
+echo "  提供商: xxx Claude"
 echo "  Base URL: $BASE_URL"
 echo "  API Key: ${API_KEY:0:10}****"
 echo
@@ -49,7 +49,7 @@ if [ $? -eq 0 ]; then
     echo
     echo "下一步："
     echo "  1. 验证配置：./m2cc.sh --list"
-    echo "  2. 切换到 TAOU Claude：./m2cc.sh --switch custom-taou-claude"
+    echo "  2. 切换到 xxx Claude：./m2cc.sh --switch custom-xxx-claude"
     echo "  3. 开始使用：claude"
     echo
 else

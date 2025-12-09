@@ -6,12 +6,12 @@
 echo "正在配置自定义模型提供商..."
 echo
 
-# ============ 配置示例 1: TAOU Claude ============
+# ============ 配置示例 1: xxx Claude ============
 # 取消下面的注释并修改为你的实际配置
 
-# export PROVIDER_ID="taou-claude"
-# export PROVIDER_NAME="TAOU Claude"
-# export BASE_URL="https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic"
+# export PROVIDER_ID="xxx-claude"
+# export PROVIDER_NAME="xxx Claude"
+# export BASE_URL="https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic"
 # export API_KEY="claude_code"
 # export TIMEOUT="600000"  # 可选，默认 600000ms
 # export MODEL="claude-3-5-sonnet-20241022"  # 可选，默认模型名称
@@ -31,8 +31,8 @@ if [ -z "$PROVIDER_ID" ] || [ -z "$BASE_URL" ] || [ -z "$API_KEY" ]; then
     echo "错误：请先在脚本中配置环境变量！"
     echo
     echo "必需的环境变量："
-    echo "  PROVIDER_ID  - 提供商标识（如 taou-claude）"
-    echo "  PROVIDER_NAME - 显示名称（如 TAOU Claude）"
+    echo "  PROVIDER_ID  - 提供商标识（如 xxx-claude）"
+    echo "  PROVIDER_NAME - 显示名称（如 xxx Claude）"
     echo "  BASE_URL     - API 基础 URL"
     echo "  API_KEY      - API 密钥"
     echo

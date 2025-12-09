@@ -51,8 +51,8 @@
    - 包含完整的配置示例
    - 支持批量配置
 
-2. **setup_taou_claude.sh** - TAOU Claude 一键配置脚本
-   - 预配置好的 TAOU Claude 设置
+2. **setup_xxx_claude.sh** - xxx Claude 一键配置脚本
+   - 预配置好的 xxx Claude 设置
    - 一键运行即可完成配置
    - 包含配置验证和确认
 
@@ -94,16 +94,16 @@
 
 #### 环境变量配置
 ```bash
-export PROVIDER_ID="taou-claude"
-export PROVIDER_NAME="TAOU Claude"
-export BASE_URL="https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic"
+export PROVIDER_ID="xxx-claude"
+export PROVIDER_NAME="xxx Claude"
+export BASE_URL="https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic"
 export API_KEY="claude_code"
 ./m2cc.sh --add-custom-env
 ```
 
 #### 一键脚本配置
 ```bash
-./setup_taou_claude.sh
+./setup_xxx_claude.sh
 ```
 
 ### 🔧 技术细节

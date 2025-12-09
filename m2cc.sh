@@ -2278,9 +2278,9 @@ M2CC - Claude Code 多模型配置管理工具
     ./m2cc.sh --add-custom
 
     # 从环境变量添加自定义模型
-    export PROVIDER_ID="taou-claude"
-    export PROVIDER_NAME="TAOU Claude"
-    export BASE_URL="https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic"
+    export PROVIDER_ID="xxx-claude"
+    export PROVIDER_NAME="xxx Claude"
+    export BASE_URL="https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic"
     export API_KEY="claude_code"
     ./m2cc.sh --add-custom-env
 
@@ -2484,9 +2484,9 @@ handle_arguments() {
                 log_error "缺少必需的环境变量：PROVIDER_ID, BASE_URL, API_KEY"
                 echo
                 echo "使用示例："
-                echo "  export PROVIDER_ID=\"taou-claude\""
-                echo "  export PROVIDER_NAME=\"TAOU Claude\""
-                echo "  export BASE_URL=\"https://maigpt.in.taou.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic\""
+                echo "  export PROVIDER_ID=\"xxx-claude\""
+                echo "  export PROVIDER_NAME=\"xxx Claude\""
+                echo "  export BASE_URL=\"https://maigpt.in.xxx.com/rpc/platforms/go_pbs/maigpt/proxy/zhipu/api/anthropic\""
                 echo "  export API_KEY=\"claude_code\""
                 echo "  export TIMEOUT=\"600000\"  # 可选"
                 echo "  export MODEL=\"claude-3-5-sonnet-20241022\"  # 可选"
